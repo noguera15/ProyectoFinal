@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: "architecture"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: myuser
+    password: mypassword
+
+  flyway:
+    enabled: true # enables flyway database migration
+    locations: classpath:db/migration/structure, classpath:db/migration/data # the location where flyway should look for migration scripts
+    validate-on-migrate: true
+
+logging:
+  level:
+    root: INFO
